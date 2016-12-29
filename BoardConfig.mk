@@ -26,11 +26,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8916_X6_6171E
 BOARD_KERNEL_CMDLINE += phy-msm-usb.floated_charger_enable=1
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
-TARGET_KERNEL_CONFIG := cyanogenmod_rendang_defconfig
-
-ifneq ($(TARGET_BUILD_VARIANT),user)
-TARGET_KERNEL_ADDITIONAL_CONFIG := cyanogenmod_debug_config
-endif
+TARGET_KERNEL_CONFIG := lineageos_rendang_defconfig
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
