@@ -62,7 +62,7 @@ PRODUCT_PACKAGES += \
     Snap
 
 # Charger
-ADDITIONAL_DEFAULT_PROPERTIES += \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.usb.vid=201E \
     ro.usb.id.charge=F006 \
     ro.usb.id.mtp=2282 \
@@ -73,7 +73,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.usb.id.ums_adb=2285
 
 #Secure
-ADDITIONAL_DEFAULT_PROPERTIES += \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
     ro.adb.secure=0
 
