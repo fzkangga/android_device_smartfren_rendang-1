@@ -124,10 +124,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.qcom.usb.rc
 
-# Recovery
-PRODUCT_EXTRA_RECOVERY_KEYS += \
-    $(LOCAL_PATH)/rendang-releasekey
-
 # Sensor HAL
 PRODUCT_PACKAGES += \
     calmodule.cfg \
