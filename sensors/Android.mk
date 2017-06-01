@@ -30,6 +30,7 @@ LOCAL_SHARED_LIBRARIES := liblog libcutils libdl libxml2 libutils
 
 LOCAL_MODULE := sensors.$(TARGET_DEVICE)
 LOCAL_MODULE_TAGS := optional
+LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
 
@@ -76,7 +77,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := sensors.$(TARGET_BOARD_PLATFORM)
 
 LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_PROPRIETARY_MODULE := true
+LOCAL_VENDOR_MODULE := true
 
 LOCAL_CFLAGS := -DLOG_TAG=\"MultiHal\"
 
