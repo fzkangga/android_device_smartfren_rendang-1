@@ -25,6 +25,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+on init
+    write /proc/sys/vm/page-cluster 0
+
 on boot
     # change file owner for factory test
     chown system system /sys/devices/virtual/touchscreen/touchscreen_dev/firmware_version
@@ -61,10 +64,6 @@ on charger
    chmod 0664 /sys/class/power_supply/bms/current_now
    chmod 0664 /sys/class/power_supply/bms/voltage_ocv
    start vm_bms
-
-on post-fs
-    swapon_all /fstab.qcom
-    write /proc/sys/vm/page-cluster 0
 
 service vm_bms /system/vendor/bin/vm_bms
     class core
@@ -103,3 +102,7 @@ service imscmservice /system/vendor/bin/imscmservice
 on property:sys.ims.DATA_DAEMON_STATUS=1
    start ims_rtp_daemon
    start imscmservice
+
+on property:sys.boot_completed=1
+    # Enable ZRAM on boot_complete
+    swapon_all /vendor/etc/fstab.qcom
