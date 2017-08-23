@@ -61,6 +61,10 @@ PRODUCT_PACKAGES += \
     libmm-qcamera \
     Snap
 
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    camera.device@1.0-impl
+
 # Charger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.usb.vid=201E \
