@@ -36,16 +36,6 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BOARD_NO_CHARGER_LED := true
 
-# Dex
-ifeq ($(HOST_OS),linux)
-    ifeq ($(TARGET_BUILD_VARIANT),user)
-        ifeq ($(WITH_DEXPREOPT),)
-            WITH_DEXPREOPT := true
-            WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
-        endif
-    endif
-endif
-
 # Flags
 BOARD_NO_SECURE_DISCARD := true
 
