@@ -14,7 +14,8 @@
 # limitations under the License.
 #
 
-$(call inherit-product-if-exists, vendor/smartfren/rendang/rendang-vendor.mk)
+# Inherit the rest from msm8916-common
+$(call inherit-product, device/cyanogen/msm8916-common/msm8916.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -132,6 +133,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
-# Inherit the rest from msm8916-common
-$(call inherit-product, device/cyanogen/msm8916-common/msm8916.mk)
-
+# Call the proprietary setup
+$(call inherit-product, vendor/smartfren/rendang/rendang-vendor.mk)
