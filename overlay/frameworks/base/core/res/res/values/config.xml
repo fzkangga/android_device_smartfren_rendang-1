@@ -19,9 +19,17 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-
     <!-- Traffic stats -->
     <string name="config_datause_iface">rmnet0</string>
+
+    <!-- Minimum allowable screen brightness to use in a very dark room.
+         This value sets the floor for the darkest possible auto-brightness
+         adjustment.  It is expected to be somewhat less than the first entry in
+         config_autoBrightnessLcdBacklightValues so as to allow the user to have
+         some range of adjustment to dim the screen further than usual in very
+         dark rooms. The contents of the screen must still be clearly visible
+         in darkness (although they may not be visible in a bright room). -->
+    <integer name="config_screenBrightnessDark">4</integer>
 
     <!-- Flag indicating whether we should enable the automatic brightness in Settings.
                   config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
@@ -48,14 +56,18 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>10</item>
-        <item>30</item>
+        <item>5</item>
+        <item>25</item>
+        <item>50</item>
         <item>100</item>
         <item>200</item>
-        <item>400</item>
+        <item>300</item>
+        <item>500</item>
+        <item>750</item>
         <item>1000</item>
+        <item>1500</item>
         <item>2000</item>
-        <item>3000</item>
+        <item>10000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -64,15 +76,19 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>12</item>   <!-- 0-10 -->
-        <item>46</item>   <!-- 10-30 -->
-        <item>126</item>   <!-- 30-100 -->
-        <item>148</item>   <!-- 100-200 -->
-        <item>148</item>   <!-- 200-400 -->
-        <item>168</item>   <!-- 400-1000 -->
-        <item>200</item>  <!-- 1000-2000 -->
-        <item>226</item>  <!-- 2000-3000 -->
-        <item>255</item>  <!-- 3000+ -->
+        <item>7</item>
+        <item>10</item>
+        <item>16</item>
+        <item>29</item>
+        <item>48</item>
+        <item>80</item>
+        <item>126</item>
+        <item>181</item>
+        <item>211</item>
+        <item>232</item>
+        <item>255</item>
+        <item>255</item>
+        <item>255</item>
     </integer-array>
 
     <!-- Hardware 'face' keys present on the device, stored as a bit field.
@@ -149,10 +165,34 @@
          allocations to block waiting on disk I/O or lowmemorykiller.  Overrides the default
          value chosen by ActivityManager based on screen size.  0 prevents keeping any extra
          memory over what the kernel keeps by default.  -1 keeps the default. -->
-    <integer name="config_extraFreeKbytesAbsolute">61440</integer>
+    <!--<integer name="config_extraFreeKbytesAbsolute">61440</integer>-->
 
-    <!--  Disable Modem Profiles for CDMA -->
-    <bool name="config_fetch_apn_from_omh_card">false</bool>
+    <!-- Config determines whether to update phone object when voice registration
+         state changes. Voice radio tech change will always trigger an update of
+         phone object irrespective of this config -->
+    <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
+
+    <!-- Vibrator pattern for feedback about a long screen/key press -->
+    <integer-array name="config_longPressVibePattern">
+        <item>0</item>
+        <item>28</item>
+        <item>10</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for feedback about touching a virtual key -->
+    <integer-array name="config_virtualKeyVibePattern">
+        <item>0</item>
+        <item>28</item>
+        <item>8</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
+    <integer-array name="config_keyboardTapVibePattern">
+        <item>28</item>
+    </integer-array>
+
+    <!-- Our modem doesn't support this query yet -->
+    <string name="config_radio_access_family">GPRS|EDGE|UMTS|HSDPA|HSUPA|HSPA|LTE|HSPAP|GSM|TD_SCDMA|WCDMA|LTE_CA</string>
 
     <!-- Flag specifying whether VoLTE is available on device -->
     <bool name="config_device_volte_available">true</bool>
@@ -161,11 +201,6 @@
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
     <bool name="config_carrier_volte_available">true</bool>
-
-    <!-- Config determines whether to update phone object when voice registration
-         state changes. Voice radio tech change will always trigger an update of
-         phone object irrespective of this config -->
-    <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
 
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
