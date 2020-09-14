@@ -56,7 +56,7 @@ vendor/lib/libmmqjpeg_codec.so
 vendor/lib/liboemcamera.so
 vendor/lib/libqomx_jpegenc.so
 
-# Camera Actuator
+# Camera actuator
 vendor/lib/libactuator_dw9714_ov5648_rendang.so
 vendor/lib/libactuator_dw9714_ov5648_rendang_camcorder.so
 vendor/lib/libactuator_dw9714_ov5648_rendang_camera.so
@@ -64,7 +64,7 @@ vendor/lib/libactuator_dw9714_ov5670_rendang.so
 vendor/lib/libactuator_dw9714_ov5670_rendang_camcorder.so
 vendor/lib/libactuator_dw9714_ov5670_rendang_camera.so
 
-# Camera Chromatix
+# Camera chromatix
 vendor/lib/libchromatix_gc2355_rendang_common.so
 vendor/lib/libchromatix_gc2355_rendang_preview.so
 vendor/lib/libchromatix_ov5648_q5v22e_rendang_common.so
@@ -90,7 +90,7 @@ etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
 etc/firmware/cpp_firmware_v1_4_0.fw
 
-# Camera Sensor
+# Camera sensors
 vendor/lib/libmmcamera_gc2355_rendang.so
 vendor/lib/libmmcamera_ov5648_q5v22e_rendang.so
 vendor/lib/libmmcamera_ov5670_q5v41b.so
@@ -273,7 +273,6 @@ vendor/lib/libqmi.so
 vendor/lib/libsmemlog.so
 
 # Radio
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -app/shutdownlistener/shutdownlistener.apk
 bin/netmgrd
 bin/qmuxd
@@ -284,7 +283,7 @@ etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
 -framework/qcnvitems.jar
 -framework/qcrilhook.jar
-vendor/lib/libcneapiclient.so
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/lib/libconfigdb.so
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
