@@ -97,17 +97,11 @@ vendor/lib/libmmcamera_ov5670_q5v41b.so
 
 # DRM
 bin/qseecomd
-lib/libdrmdecrypt.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libQSEEComAPI.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
-vendor/lib/libwvdrm_L3.so
-vendor/lib/libwvm.so
-vendor/lib/libWVStreamControlAPI_L3.so
-vendor/lib/drm/libdrmwvmplugin.so
-vendor/lib/mediadrm/libwvdrmengine.so
 
 # GPS - from crackling
 -lib/libloc_api_v02.so|74df1667c42701ef550ba73db6c5ae63542913ac
@@ -272,6 +266,11 @@ vendor/lib/libthermalioctl.so
 bin/time_daemon
 -vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
+
+# Widevine - from crackling
+vendor/lib/libwvdrm_L3.so|7e77482481197997294a834bfbc817a01b6075cd
+vendor/lib/libWVStreamControlAPI_L3.so|61673304827483d44b735a3dd08f0783d10ce92d
+vendor/lib/mediadrm/libwvdrmengine.so|b88c5df27094314c39ff208fdd30c9e37042c70c
 
 # WLAN
 lib/libwcnss_qmi.so
