@@ -94,9 +94,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/ims/ims.xml:system/etc/permissions/ims.xml \
     $(LOCAL_PATH)/configs/ims/qti_permissions.xml:system/etc/permissions/qti_permissions.xml
 
-# irqbalance
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/etc/msm_irqbalance.conf
+# Init
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.target.rc
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -111,13 +112,6 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
-
-PRODUCT_PACKAGES += \
-    libqcomvisualizer \
-    libqcompostprocbundle \
-    fstab.qcom \
-    init.target.rc \
-    init.qcom.usb.rc
 
 # Sensor HAL
 PRODUCT_PACKAGES += \

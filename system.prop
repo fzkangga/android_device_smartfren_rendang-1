@@ -7,19 +7,20 @@ persist.audio.fluence.speaker=true
 # Display
 ro.sf.lcd_density=240
 
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/config
+
 # Radio
 persist.radio.multisim.config=dsds
 ril.ecclist=112,911,110,122,119,120,000,118
 ril.ecclist1=112,911,110,122,119,120,000,118
 ril.subscription.types=RUIM
-persist.radio.rat_on=combine
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 
 ro.cdma.force_plmn_lookup=true
 ro.cdma.home.operator.alpha=Smartfren
 ro.telephony.default_network=8,1
 telephony.lteOnCdmaDevice=1
-ro.ril.multi_rat_capable=true
 
 # set max background services
 ro.config.max_starting_bg=8
@@ -29,3 +30,4 @@ ro.sys.fw.dex2oat_thread_count=3
 
 # Disable CPP duplication mode
 persist.camera.cpp.duplication=false
+persist.camera.hal.debug.mask=0
