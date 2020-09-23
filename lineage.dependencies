@@ -1,10 +1,12 @@
 [
   {
-    "repository": "android_device_cyanogen_msm8916-common",
+    "repository": "fzkangga/android_device_cyanogen_msm8916-common",
     "target_path": "device/cyanogen/msm8916-common"
+    "branch": "cm-14.1"
   },
   {
-    "repository": "android_kernel_cyanogen_msm8916",
-    "target_path": "kernel/cyanogen/msm8916",
+    "repository": "fzkangga/android_kernel_lineage_msm8916",
+    "target_path": "kernel/lineage/msm8916"
+    "branch": "cm-14.1_108"
   }
 ]
