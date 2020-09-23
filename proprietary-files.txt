@@ -35,8 +35,8 @@ vendor/lib/libmmcamera2_imglib_modules.so
 vendor/lib/libmmcamera2_isp_modules.so
 vendor/lib/libmmcamera2_is.so
 vendor/lib/libmmcamera2_pproc_modules.so
-vendor/lib/libmmcamera2_sensor_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
+vendor/lib/libmmcamera2_sensor_modules.so
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmcamera2_vpe_module.so
@@ -157,8 +157,6 @@ vendor/lib/libimsmedia_jni.so
 #IMS_VT
 vendor/lib/lib-imsvt.so
 vendor/lib/lib-imscamera.so
-vendor/lib/libtzplayready.so
-vendor/lib/libvcel.so
 
 #IMS_SETTINGS
 vendor/lib/lib-imss.so
@@ -193,7 +191,7 @@ vendor/lib/lib-rtpdaemoninterface.so
 vendor/lib/lib-rtpsl.so
 
 # Media
--vendor/lib/libHevcSwDecoder.so
+vendor/lib/libHevcSwDecoder.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmosal.so
 vendor/lib/libmm-color-convertor.so
@@ -208,8 +206,11 @@ vendor/lib/libqti-perfd-client.so
 # Postprocessing
 bin/mm-pp-daemon
 vendor/lib/libdisp-aba.so
--vendor/lib/libmm-abl.so
+vendor/lib/libmm-abl.so
 vendor/lib/libmm-abl-oem.so
+vendor/lib/libmm-als.so
+vendor/lib/libmm-disp-apis.so
+vendor/lib/libmm-qdcm.so
 
 # Qualcomm framework
 bin/irsc_util
@@ -223,7 +224,6 @@ vendor/lib/libqcci_legacy.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 vendor/lib/libqmi_cci.so
-vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
