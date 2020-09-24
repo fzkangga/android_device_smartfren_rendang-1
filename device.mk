@@ -82,18 +82,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/izat.conf:system/etc/izat.conf \
     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf
 
-# IMS
-PRODUCT_PACKAGES += \
-    IMSEnabler \
-    init.qti.ims.sh \
-    ims \
-    imscmlibrary
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/ims/imscm.xml:system/etc/permissions/imscm.xml \
-    $(LOCAL_PATH)/configs/ims/ims.xml:system/etc/permissions/ims.xml \
-    $(LOCAL_PATH)/configs/ims/qti_permissions.xml:system/etc/permissions/qti_permissions.xml
-
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \

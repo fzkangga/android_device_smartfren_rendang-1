@@ -150,6 +150,9 @@ bin/ims_rtp_daemon
 bin/imscmservice
 bin/imsdatadaemon
 bin/imsqmidaemon
+etc/permissions/ims.xml
+etc/permissions/imscm.xml
+etc/permissions/qti_permissions.xml
 vendor/lib/lib-dplmedia.so
 vendor/lib/lib-ims-rcscmjni.so
 vendor/lib/lib-imsSDP.so
