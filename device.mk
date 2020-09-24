@@ -72,6 +72,11 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.usb.id.ums=2286 \
     ro.usb.id.ums_adb=2285
 
+#Secure
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.secure=0 \
+    ro.adb.secure=0
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8916
