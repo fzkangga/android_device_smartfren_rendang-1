@@ -30,6 +30,12 @@ BOARD_CAMERA_SENSORS := ov5670_q5v41b ov5648_q5v22e_rendang gc2355_rendang
 TARGET_USE_VENDOR_CAMERA_EXT := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# Charger
+BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+BOARD_NO_CHARGER_LED := true
+
 # Dex
 ifeq ($(HOST_OS),linux)
     ifeq ($(TARGET_BUILD_VARIANT),user)
