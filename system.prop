@@ -35,7 +35,7 @@ ril.ecclist=112,911,110,122,119,120,000,118
 ril.ecclist1=112,911,110,122,119,120,000,118
 ril.subscription.types=RUIM
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
-ro.telephony.default_network=8,1
+ro.telephony.default_network=9,1
 telephony.lteOnCdmaDevice=1
 
 # set max background services
