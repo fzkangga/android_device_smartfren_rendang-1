@@ -20,6 +20,9 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := RENDANG,Rendang,rendang,G36C1H,g36c1h
+
 PRODUCT_NAME := lineage_rendang
 BOARD_VENDOR := smartfren
 PRODUCT_DEVICE := rendang
