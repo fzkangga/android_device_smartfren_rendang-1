@@ -34,8 +34,8 @@
 #include <pthread.h>
 #include <inttypes.h>
 #include <media/msmb_camera.h>
-#include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define CAM_MAX_NUM_BUFS_PER_STREAM  (24)
 #define MAX_METADATA_PAYLOAD_SIZE    (1024)
@@ -52,14 +52,14 @@
 #define CEILING2(X)  (((X) + 0x0001) & 0xFFFE)
 
 #define MAX_ZOOMS_CNT 79
-#define MAX_SIZES_CNT 30
+#define MAX_SIZES_CNT 24
 #define MAX_EXP_BRACKETING_LENGTH 32
 #define MAX_ROI 5
 #define MAX_STREAM_NUM_IN_BUNDLE 4
 #define MAX_NUM_STREAMS          8
 #define CHROMATIX_SIZE 21292
 #define COMMONCHROMATIX_SIZE 42044
-#define AFTUNE_SIZE 5200  //sizeof(actuator_driver_params_t) + sizeof(af_algo_tune_parms_t)
+#define AFTUNE_SIZE 5000  //sizeof(actuator_driver_params_t) + sizeof(af_algo_tune_parms_t)
 #define MAX_SCALE_SIZES_CNT 8
 #define MAX_SAMP_DECISION_CNT     64
 

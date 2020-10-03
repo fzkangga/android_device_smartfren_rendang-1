@@ -496,7 +496,7 @@ bool QCamera2HardwareInterface::TsMakeupProcess(mm_camera_buf_def_t *pFrame,
     const char* pch_makeup_enable = mParameters.get(QCameraParameters::KEY_TS_MAKEUP);
     pthread_mutex_unlock(&m_parm_lock);
     if (pch_makeup_enable == NULL) {
-        CDBG("%s pch_makeup_enable = null",__func__);
+        CDBG_HIGH("%s pch_makeup_enable = null",__func__);
         return bRet = false;
     }
     bool enableMakeUp = (strcmp(pch_makeup_enable,"On") == 0)&& faceRect.left > -1 ;
@@ -1797,7 +1797,7 @@ void QCamera2HardwareInterface::dumpJpegToFile(const void *data,
                 if (file_fd >= 0) {
                     ssize_t written_len = write(file_fd, data, size);
                     fchmod(file_fd, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
-                    CDBG_HIGH("%s: written number of bytes %zd\n", __func__, written_len);
+                    CDBG_HIGH("%s: written number of bytes %d\n", __func__, written_len);
                     close(file_fd);
                 } else {
                     ALOGE("%s: fail t open file for image dumping", __func__);
@@ -2020,7 +2020,7 @@ void QCamera2HardwareInterface::dumpFrameToFile(QCameraStream *stream,
                             }
                         }
 
-                        CDBG_HIGH("%s: written number of bytes %zd\n", __func__, written_len);
+                        CDBG_HIGH("%s: written number of bytes %d\n", __func__, written_len);
                         close(file_fd);
                     } else {
                         ALOGE("%s: fail t open file for image dumping", __func__);

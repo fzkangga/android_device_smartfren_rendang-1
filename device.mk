@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/wingtech/wt88047/wt88047-vendor.mk)
+$(call inherit-product, vendor/smartfren/rendang/rendang-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -24,7 +24,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -40,15 +40,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/vendor/etc/mixer_paths_qrd_skui.xml
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 854
+TARGET_SCREEN_WIDTH := 480
 TARGET_BOOTANIMATION_HALF_RES := true
 
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8916 \
     libmm-qcamera \
-    libshim_camera \
     Snap
 
 PRODUCT_PACKAGES += \
@@ -76,8 +75,9 @@ PRODUCT_PACKAGES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/ft5x06_ts.kl:system/vendor/usr/keylayout/ft5x06_ts.kl \
-    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/vendor/usr/keylayout/gpio-keys.kl
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/vendor/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/keylayout/msg2xxx.kl:system/vendor/usr/keylayout/msg2xxx.kl \
+    $(LOCAL_PATH)/keylayout/qpnp_pon.kl:system/vendor/usr/keylayout/qpnp_pon.kl
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -106,9 +106,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     calmodule.cfg \
-    libcalmodule_common \
+    libcalmodule_memsic \
     sensors.msm8916 \
-    sensors.wt88047
+    sensors.rendang
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/_hals.conf:system/vendor/etc/sensors/_hals.conf
@@ -119,15 +119,14 @@ PRODUCT_COPY_FILES += \
 
 # USB ID
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.usb.vid=2717 \
-    ro.usb.id.midi=90BA \
-    ro.usb.id.midi_adb=90BB \
-    ro.usb.id.mtp=ff60 \
-    ro.usb.id.mtp_adb=ff68 \
-    ro.usb.id.ptp=ff10 \
-    ro.usb.id.ptp_adb=ff18 \
-    ro.usb.id.ums=ff20 \
-    ro.usb.id.ums_adb=ff28
+    ro.usb.vid=201E \
+    ro.usb.id.charge=F006 \
+    ro.usb.id.mtp=2282 \
+    ro.usb.id.mtp_adb=2281 \
+    ro.usb.id.ptp=2284 \
+    ro.usb.id.ptp_adb=2283 \
+    ro.usb.id.ums=2286 \
+    ro.usb.id.ums_adb=2285
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
