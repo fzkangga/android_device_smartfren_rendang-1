@@ -63,6 +63,9 @@ BOARD_KERNEL_CMDLINE += phy-msm-usb.floated_charger_enable=1
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Manifest
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/rendang_manifest.xml
+
 # Power
 TARGET_HAS_NO_POWER_STATS := true
 
