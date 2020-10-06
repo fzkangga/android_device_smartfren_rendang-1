@@ -63,21 +63,9 @@ PRODUCT_PACKAGES += \
     libmm-qcamera \
     Snap
 
-# Charger
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.usb.vid=201E \
-    ro.usb.id.charge=F006 \
-    ro.usb.id.mtp=2282 \
-    ro.usb.id.mtp_adb=2281 \
-    ro.usb.id.ptp=2284 \
-    ro.usb.id.ptp_adb=2283 \
-    ro.usb.id.ums=2286 \
-    ro.usb.id.ums_adb=2285
-
-#Secure
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.secure=0 \
-    ro.adb.secure=0
+# For android_filesystem_config.h
+PRODUCT_PACKAGES += \
+    fs_config_files
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -121,7 +109,23 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/_hals.conf:system/vendor/etc/sensors/_hals.conf
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/spn-conf.xml:system/etc/spn-conf.xml
+    $(LOCAL_PATH)/configs/spn-conf.xml:system/vendor/etc/spn-conf.xml
+
+# USB
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.usb.vid=201E \
+    ro.usb.id.charge=F006 \
+    ro.usb.id.mtp=2282 \
+    ro.usb.id.mtp_adb=2281 \
+    ro.usb.id.ptp=2284 \
+    ro.usb.id.ptp_adb=2283 \
+    ro.usb.id.ums=2286 \
+    ro.usb.id.ums_adb=2285
+
+#Secure
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.secure=0 \
+    ro.adb.secure=0
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
