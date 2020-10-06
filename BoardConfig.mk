@@ -68,6 +68,9 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
+# Power
+TARGET_HAS_NO_POWER_STATS := true
+
 # System Prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
