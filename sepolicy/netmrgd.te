@@ -1,1 +1,2 @@
+allow netmgrd self:capability dac_override;
 allow netmgrd hal_cne_hwservice:hwservice_manager find;
