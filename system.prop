@@ -19,8 +19,8 @@ ro.sys.fw.dex2oat_thread_count=3
 
 # Radio
 persist.radio.multisim.config=dsds
-persist.radio.custom_ecc=1
-persist.radio.ecc_hard_1=112,911,110,122,119,120,000,118
-persist.radio.ecc_hard_count=1
-rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+ril.ecclist=112,911,110,122,119,120,000,118
+ril.ecclist1=112,911,110,122,119,120,000,118
 ril.subscription.types=RUIM
+rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+ro.telephony.default_network=9,1
