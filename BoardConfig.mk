@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,12 +17,10 @@
 
 FORCE_32_BIT := true
 
+# Inherit from msm8916-common
 include device/cyanogen/msm8916-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/smartfren/rendang
-
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8916_X6_6171E
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -32,10 +31,9 @@ TARGET_USE_VENDOR_CAMERA_EXT := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Charger
-BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-BOARD_NO_CHARGER_LED := true
+BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -49,8 +47,8 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # GPS
-USE_DEVICE_SPECIFIC_GPS := true
 TARGET_NO_RPC := true
+USE_DEVICE_SPECIFIC_GPS := true
 
 # Kernel
 BOARD_DTBTOOL_ARGS := -2

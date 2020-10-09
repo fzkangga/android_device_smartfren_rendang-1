@@ -15,23 +15,7 @@ ro.sf.lcd_density=240
 ro.frp.pst=/dev/block/platform/soc.0/7824900.sdhci/by-name/config
 
 # IMS
-DEVICE_PROVISIONED=1
-persist.radio.jbims=1
-persist.radio.ROTATION_ENABLE=1
-persist.radio.VT_ENABLE=1
-persist.radio.VT_HYBRID_ENABLE=1
-persist.radio.VT_USE_MDM_TIME=0
-service.qti.ims.enabled=1
-net.lte.volte_call_capable=true
-persist.ims.enableADBLogs=1
-persist.ims.enableDebugLogs=1
-persist.radio.calls.on.ims=true
-persist.radio.csvt.enabled=false
 persist.dbg.volte_avail_ovr=1
-persist.volte_enabled_by_hw=1
-persist.dbg.vt_avail_ovr=1
-persist.data.iwlan.enable=true
-persist.dbg.wfc_avail_ovr=1
 
 # Perf
 ro.sys.fw.dex2oat_thread_count=3
@@ -43,4 +27,3 @@ ril.ecclist1=112,911,110,122,119,120,000,118
 ril.subscription.types=RUIM
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 ro.telephony.default_network=9,1
-telephony.lteOnCdmaDevice=1
