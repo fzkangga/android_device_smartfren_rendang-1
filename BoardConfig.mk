@@ -64,6 +64,9 @@ BOARD_KERNEL_CMDLINE += phy-msm-usb.floated_charger_enable=1
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Manifest
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/rendang_manifest.xml
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
