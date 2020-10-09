@@ -118,9 +118,6 @@ PRODUCT_PACKAGES += \
     libcalmodule_memsic \
     sensors.msm8916
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/spn-conf.xml:system/etc/spn-conf.xml
-
 # Wifi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_cfg.dat \
