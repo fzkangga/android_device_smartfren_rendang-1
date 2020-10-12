@@ -69,7 +69,7 @@ on post-fs
 service vm_bms /system/vendor/bin/vm_bms
     class core
     user root
-    group root
+    group root wakelock
 
 service imsqmidaemon /system/vendor/bin/imsqmidaemon
     class main
