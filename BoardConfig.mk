@@ -22,9 +22,6 @@ include device/cyanogen/msm8916-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/smartfren/rendang
 
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8916_X6_6171E
-
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
