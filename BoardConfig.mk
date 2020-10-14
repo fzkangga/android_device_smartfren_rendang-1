@@ -33,7 +33,6 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-BOARD_NO_CHARGER_LED := true
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 
 # Filesystem
